@@ -22,6 +22,14 @@
 
 Live demo: https://na6im.github.io/awsome-floating-button/
 
+#### Screenshots
+   ![screenshots](./screenshots/Floating%20Button%201.gif)
+   ![screenshots](./screenshots/Floating%20Button%202.gif)
+   ![screenshots](./screenshots/Floating%20Button%203.gif)
+   ![screenshots](./screenshots/Floating%20Button%204.gif)
+<p align="center">
+</p>
+
 #### Install
 
 ```bsh
@@ -79,4 +87,6 @@ Contributing to the project is a piece of :cake:, read the [contributing guideli
 
 The code is available under the [MIT](https://github.com/na6im/awsome-floating-button/blob/master/LICENSE) license.
 
-###### [WuuD®](http://wuud.net/) - In code we trust -
+<p align="center">
+ <b>WuuD® - in code we trust -
+</p>
