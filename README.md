@@ -23,11 +23,11 @@
 Live demo: https://na6im.github.io/awsome-floating-button/
 
 #### Screenshots
-   ![screenshots](./screenshots/Floating%20Button%201.gif)
-   ![screenshots](./screenshots/Floating%20Button%202.gif)
-   ![screenshots](./screenshots/Floating%20Button%203.gif)
-   ![screenshots](./screenshots/Floating%20Button%204.gif)
 <p align="center">
+   <img width="160" height="169" src="./screenshots/Floating%20Button%201.gif" alt="screenshot1">
+   <img width="160" height="169" src="./screenshots/Floating%20Button%202.gif" alt="screenshot1">
+   <img width="160" height="169" src="./screenshots/Floating%20Button%203.gif" alt="screenshot1">
+   <img width="160" height="169" src="./screenshots/Floating%20Button%204.gif" alt="screenshot1">
 </p>
 
 #### Install
