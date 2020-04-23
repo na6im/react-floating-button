@@ -38,7 +38,7 @@ export const Container = styled(
 )`
   height: ${(props) => props.height}px;
   width: ${(props) => props.height}px;
-  border-radius: 50px;
+  border-radius: ${(props) => props.height}px;
   background-color: #8f1d30;
   cursor: pointer;
   display: flex;
@@ -78,7 +78,7 @@ export const Item = styled(
   position: absolute;
   height: ${(props) => props.height}px;
   width: ${(props) => props.height}px;
-  border-radius: 50px;
+  border-radius: ${(props) => props.height}px;
   background-color: #dbdbdb;
   cursor: pointer;
   display: flex;

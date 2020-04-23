@@ -35,9 +35,8 @@ export default styled(
   position: absolute;
   height: ${(props) => props.height}px;
   width: ${(props) => props.height}px;
-  border-radius: 50px;
+  border-radius: ${(props) => props.height}px;
   background-color: #dbdbdb;
-  //box-shadow: 0 1px 8px 0 rgb(255, 255, 255);
   cursor: pointer;
   display: flex;
   justify-content: center;

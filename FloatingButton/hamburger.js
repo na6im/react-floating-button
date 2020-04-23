@@ -15,16 +15,16 @@ const ToggleWrapper = styled.span`
 `;
 
 const Line = styled.div`
-  height: 4px;
+  height: ${(props) => props.height * 0.05}px;
   width: ${(props) => props.height * 0.5}px;
   border: white;
-  border-radius: 3px;
+  border-radius: ${(props) => props.height * 0.05}px;
   background-color: ${(props) => props.color};
 `;
 
 const Line1 = posed(Line)({
   open: {
-    y: 10,
+    y: (props) => props.height / 6,
     rotate: 45,
   },
   closed: { y: 0, rotate: 0 },
@@ -35,12 +35,12 @@ const Line2 = posed(Line)({
     rotate: 0,
     width: 0,
   },
-  closed: { width: (props) => props.height * 0.6, rotate: 0 },
+  closed: { width: (props) => props.height * 0.5, rotate: 0 },
 });
 
 const Line3 = posed(Line)({
   open: {
-    y: -10,
+    y: (props) => -props.height / 6,
     rotate: -45,
   },
   closed: { y: 0, rotate: 0 },
