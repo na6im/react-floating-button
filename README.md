@@ -24,10 +24,10 @@ Live demo: https://na6im.github.io/awsome-floating-button/
 
 #### Screenshots
 <p align="center">
-   <img width="160" height="169" src="./screenshots/Floating%20Button%201.gif" alt="screenshot1">
-   <img width="160" height="169" src="./screenshots/Floating%20Button%202.gif" alt="screenshot1">
-   <img width="160" height="169" src="./screenshots/Floating%20Button%203.gif" alt="screenshot1">
-   <img width="160" height="169" src="./screenshots/Floating%20Button%204.gif" alt="screenshot1">
+   <img width="160" height="169" src="https://github.com/na6im/react-floating-button/blob/master/screenshots/Floating%20Button%201.gif?raw=true" alt="screenshot1">
+   <img height="169" src="https://github.com/na6im/react-floating-button/blob/master/screenshots/Floating%20Button%202.gif?raw=true" alt="screenshot2">
+   <img height="169" src="https://github.com/na6im/react-floating-button/blob/master/screenshots/Floating%20Button%203.gif?raw=true" alt="screenshot3">
+   <img height="169" src="https://github.com/na6im/react-floating-button/blob/master/screenshots/Floating%20Button%204.gif?raw=true" alt="screenshot4">
 </p>
 
 #### Install
