@@ -18,6 +18,10 @@
 
 ## Build & Run
 
+#### Demo
+
+Live demo: https://na6im.github.io/awsome-floating-button/
+
 #### Install
 
 ```bsh
