@@ -25,6 +25,8 @@ $ npm install react-floating-button
 $ yarn add react-floating-button
 ```
 
+#### Usage
+
 ```javascript
 import FloatingButton from "react-floating-button";
 import Item from "react-floating-button";
