@@ -30,5 +30,18 @@
     "url": "https://github.com/na6im/react-floating-button"
   },
   "author": "Nassim AMOKRANE",
+  "keywords": [
+    "react",
+    "button",
+    "floating",
+    "float",
+    "Customizable",
+    "awesome",
+    "floating-button",
+    "material",
+    "animation",
+    "animaited",
+    "responsive"
+  ],
   "license": "MIT"
 }
