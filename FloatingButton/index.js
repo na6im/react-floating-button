@@ -102,7 +102,7 @@ function FloatingButton({
           >
             <img
               src={children.props.imgSrc}
-              style={{ size: size / 2, width: size / 2, fill: "white" }}
+              style={{ height: size / 2, width: size / 2, fill: "white" }}
               alt={"icon"}
             />
           </Item>
