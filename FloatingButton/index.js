@@ -1,5 +1,5 @@
 /**
- * @param {number} height           the height and width of the buttons.
+ * @param {number} size             the size  of the buttons.
  * @param {boolean} top             specify if the button should be on the top if false the
  * button will be at the bottom.
  * @param {boolean} right           specify if the button should be on the right if false the
@@ -8,7 +8,7 @@
  * @children should be an Item component with params :
  *  @param {string} imgSrc          the icon to use on given button
  *  @param {function} onClick       the callback function call onClick
- *  @param {string} color            the backgroundColor for the Item
+ *  @param {string} backgroundColor            the backgroundColor for the Item
  */
 
 import React, { useState, useEffect, useRef } from "react";
@@ -31,7 +31,7 @@ const rotations = {
 function FloatingButton({
   backgroundColor,
   color,
-  height,
+  size,
   top,
   right,
   children,
@@ -65,8 +65,8 @@ function FloatingButton({
         (number <= 6 ? (i * angle) / (number - 1) : (i * angle) / number),
       distance:
         number <= 6
-          ? height / Math.sin(angle / (number - 1)) + height / 2
-          : height / Math.sin(angle / number) + height / 2,
+          ? size / Math.sin(angle / (number - 1)) + size / 2
+          : size / Math.sin(angle / number) + size / 2,
     };
   }
 
@@ -83,26 +83,26 @@ function FloatingButton({
       ref={ref}
     >
       <Container
-        height={height}
+        size={size}
         style={{ backgroundColor: `${backgroundColor || "none"}` }}
       >
-        <MenuToggle expanded={expanded} color={color} height={height} />
+        <MenuToggle expanded={expanded} color={color} size={size} />
       </Container>
       <PoseGroup>
         {number === 1 ? (
           <Item
             key={0}
             i={getAngle(0).angle}
-            height={height}
+            size={size}
             distance={getAngle(0).distance}
             style={{
-              backgroundColor: children.props.color,
+              backgroundColor: children.props.backgroundColor,
             }}
             onClick={() => children.props.onClick()}
           >
             <img
               src={children.props.imgSrc}
-              style={{ height: height / 2, width: height / 2, fill: "white" }}
+              style={{ size: size / 2, width: size / 2, fill: "white" }}
               alt={"icon"}
             />
           </Item>
@@ -112,16 +112,16 @@ function FloatingButton({
             <Item
               key={i}
               i={getAngle(i).angle}
-              height={height}
+              size={size}
               distance={getAngle(i).distance}
               style={{
-                backgroundColor: children[i].props.color,
+                backgroundColor: children[i].props.backgroundColor,
               }}
               onClick={() => children[i].props.onClick()}
             >
               <img
                 src={children[i].props.imgSrc}
-                style={{ height: height / 2, width: height / 2 }}
+                style={{ size: size / 2, width: size / 2 }}
                 alt={`icon-${i}`}
               />
             </Item>
@@ -135,7 +135,7 @@ function FloatingButton({
 FloatingButton.defaultProps = {
   color: "#dbdbdb",
   backgroundColor: "#8f1d30",
-  height: 60,
+  size: 60,
   top: false,
   right: true,
   children: {},
@@ -144,10 +144,12 @@ FloatingButton.defaultProps = {
 FloatingButton.propTypes = {
   color: PropTypes.string,
   backgroundColor: PropTypes.string,
-  height: PropTypes.number,
+  size: PropTypes.number,
   top: PropTypes.bool,
   right: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
 };
 
 export default FloatingButton;
+export { FloatingButton };
+export { FloatingButton as Item };

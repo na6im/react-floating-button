@@ -3,7 +3,7 @@
 <p align="center">
 	<a href="https://wuud.net">
 		<img width="160" height="169" src="https://github.com/WuuD-Team/WuuD-Website/blob/master/favicon.ico?raw=true" alt="wuud">
-	<img width="300" height="200" src="https://media1.giphy.com/media/iFmw13LV1hHhViPPWz/source.gif" alt="react">
+	        <img width="300" height="200" src="https://media1.giphy.com/media/iFmw13LV1hHhViPPWz/source.gif" alt="react">
 	</a>
 </p>
 <br>
@@ -15,7 +15,6 @@
     Powered by The WuuD Team
 </p>
 
-
 ## Build & Run
 
 #### Demo
@@ -23,6 +22,7 @@
 Live demo: https://floating-button.namokrane.works/
 
 #### Screenshots
+
 <p align="center">
    <img width="160" height="169" src="https://github.com/na6im/react-floating-button/blob/master/screenshots/Floating%20Button%201.gif?raw=true" alt="screenshot1">
    <img height="169" src="https://github.com/na6im/react-floating-button/blob/master/screenshots/Floating%20Button%202.gif?raw=true" alt="screenshot2">
@@ -32,52 +32,65 @@ Live demo: https://floating-button.namokrane.works/
 
 #### Install
 
+With npm
+
 ```bsh
-$ npm install react-floating-button
-$ yarn add react-floating-button
+npm install react-floating-button
+```
+
+With yarn
+
+```bsh
+yarn add react-floating-button
 ```
 
 #### Usage
 
 ```javascript
-import FloatingButton from "react-floating-button";
-import Item from "react-floating-button";
+import { FloatingButton, Item } from "./FloatingButton";
 import downloadIcon from "./assets/DOWNLOAD.svg";
 import forwardIcon from "./assets/FORWARD.svg";
 
-<FloatingButton 
-// specify if the button should be on the right if false the button will be at the left
-// not required
-        right={true}
-// specify if the button should be on the top if false the button will be at the bottom
-// not required
-        top={true} 
-// the height and width of the buttons, not required
-        height={60}
-// the backgroundColor for the main button, not required
-        backgroundColor={"magenta"}
-// the color for the main button, not required
-        color={"black"}>
-    <Item
-// the icon to use on given button, not required
-        imgSrc={downloadIcon}
-// the callback function call onClick not required
-        onClick={() => { console.log("callback function here");}}
-// the backgroundColor for the Item, not required
-        color={'red'}
-    />
-    <Item
-        imgSrc={forwardIcon}
-        onClick={() => {
-        console.log("callback function here");
-       }}
-    />
-</FloatingButton>
+<FloatingButton>
+  <Item
+    imgSrc={downloadIcon}
+    onClick={() => {
+      console.log("callback function here");
+    }}
+  />
+  <Item
+    imgSrc={forwardIcon}
+    onClick={() => {
+      console.log("callback function here");
+    }}
+  />
+</FloatingButton>;
 ```
+
+## Options
+
+### FloatingButton
+
+| Property        | Description                                                                          | Type    | Default   |
+| --------------- | ------------------------------------------------------------------------------------ | ------- | --------- |
+| right           | Specify if the button should be on the right if false the button will be at the left | boolean | `true`    |
+| top             | Specify if the button should be on the right if false the button will be at the left | boolean | `true`    |
+| size            | The size used for the buttons                                                        | number  | `60`      |
+| backgroundColor | The backgroundColor for the main button                                              | string  | `#8f1d30` |
+| color           | The color for the main button                                                        | string  | `#dbdbdb` |
+
+### Item
+
+| Property        | Description                      | Type   | Default   |
+| --------------- | -------------------------------- | ------ | --------- |
+| imgSrc          | The icon to use on given button  | string | -         |
+| backgroundColor | The backgroundColor for the Item | string | `#8f1d30` |
+| onClick         | Called when an item is clicked   | func   | -         |
+
 ## Attribution
 
--   React Pose powered by [Popmotion](https://popmotion.io/pose/)
--   Built & Developed from [React JS](https://reactjs.org/)
+- React Pose powered by [Popmotion](https://popmotion.io/pose/)
+- Built & Developed from [React JS](https://reactjs.org/)
 
 ## Contributing to The Project
 
