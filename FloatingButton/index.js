@@ -152,4 +152,4 @@ FloatingButton.propTypes = {
 
 export default FloatingButton;
 export { FloatingButton };
-export { FloatingButton as Item };
+export { Item };

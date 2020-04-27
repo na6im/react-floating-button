@@ -47,7 +47,7 @@ yarn add react-floating-button
 #### Usage
 
 ```javascript
-import { FloatingButton, Item } from "./FloatingButton";
+import { FloatingButton, Item } from "react-floating-button";
 import downloadIcon from "./assets/DOWNLOAD.svg";
 import forwardIcon from "./assets/FORWARD.svg";
 
@@ -74,7 +74,7 @@ import forwardIcon from "./assets/FORWARD.svg";
 | Property        | Description                                                                          | Type    | Default   |
 | --------------- | ------------------------------------------------------------------------------------ | ------- | --------- |
 | right           | Specify if the button should be on the right if false the button will be at the left | boolean | `true`    |
-| top             | Specify if the button should be on the right if false the button will be at the left | boolean | `true`    |
+| top             | Specify if the button should be on the right if false the button will be at the left | boolean | `false`   |
 | size            | The size used for the buttons                                                        | number  | `60`      |
 | backgroundColor | The backgroundColor for the main button                                              | string  | `#8f1d30` |
 | color           | The color for the main button                                                        | string  | `#dbdbdb` |
@@ -84,7 +84,7 @@ import forwardIcon from "./assets/FORWARD.svg";
 | Property        | Description                      | Type   | Default   |
 | --------------- | -------------------------------- | ------ | --------- |
 | imgSrc          | The icon to use on given button  | string | -         |
-| backgroundColor | The backgroundColor for the Item | string | `#8f1d30` |
+| backgroundColor | The backgroundColor for the Item | string | `#dbdbdb` |
 | onClick         | Called when an item is clicked   | func   | -         |
 
 ## Attribution
