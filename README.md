@@ -20,7 +20,7 @@
 
 #### Demo
 
-Live demo: https://na6im.github.io/react-floating-button-demo/
+Live demo: https://floating-button.namokrane.works/
 
 #### Screenshots
 <p align="center">
