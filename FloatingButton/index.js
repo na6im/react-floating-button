@@ -83,73 +83,66 @@ function FloatingButton({
       distance={getAngle(0).distance}
       ref={ref}
     >
-      {number === 1 ? (
-        <Container
-          size={size}
-          style={{ backgroundColor: `${backgroundColor || "none"}` }}
-        >
-          <Item
-            key={0}
-            i={getAngle(0).angle}
-            size={size}
-            distance={getAngle(0).distance}
+      <Container
+        size={size}
+        style={{ backgroundColor: `${backgroundColor || "none"}` }}
+      >
+        {icon ? (
+          <img
+            src={icon}
             style={{
-              backgroundColor: children.props.backgroundColor,
+              height: size / 2,
+              width: size / 2,
             }}
-            onClick={() => children.props.onClick()}
-          >
-            <img
-              src={children.props.imgSrc}
-              style={{
-                height: size / 2,
-                width: size / 2,
-                fill: "white",
-              }}
-              alt={"icon"}
-            />
-          </Item>
-        </Container>
+            alt={"icon"}
+          />
+        ) : (
+          <MenuToggle expanded={expanded} color={color} size={size} />
+        )}
+      </Container>
+      {number === 1 ? (
+        <Item
+          key={0}
+          i={getAngle(0).angle}
+          size={size}
+          distance={getAngle(0).distance}
+          style={{
+            backgroundColor: children.props.backgroundColor,
+          }}
+          onClick={() => children.props.onClick()}
+        >
+          <img
+            src={children.props.imgSrc}
+            style={{
+              height: size / 2,
+              width: size / 2,
+              fill: "white",
+            }}
+            alt={"icon"}
+          />
+        </Item>
       ) : (
-        <React.Fragment>
-          <Container
-            size={size}
-            style={{ backgroundColor: `${backgroundColor || "none"}` }}
-          >
-            {icon ? (
-              <img
-                src={icon}
+        <PoseGroup>
+          {expanded &&
+            [...Array(number)].map((x, i) => (
+              <Item
+                key={i}
+                i={getAngle(i).angle}
+                size={size}
+                distance={getAngle(i).distance}
                 style={{
-                  height: size / 2,
-                  width: size / 2,
+                  backgroundColor: children[i].props.backgroundColor,
                 }}
-                alt={"icon"}
-              />
-            ) : (
-              <MenuToggle expanded={expanded} color={color} size={size} />
-            )}
-            <PoseGroup>
-              {expanded &&
-                [...Array(number)].map((x, i) => (
-                  <Item
-                    key={i}
-                    i={getAngle(i).angle}
-                    size={size}
-                    distance={getAngle(i).distance}
-                    style={{
-                      backgroundColor: children[i].props.backgroundColor,
-                    }}
-                    onClick={() => children[i].props.onClick()}
-                  >
-                    <img
-                      src={children[i].props.imgSrc}
-                      style={{ height: size / 2, width: size / 2 }}
-                      alt={`icon-${i}`}
-                    />
-                  </Item>
-                ))}
-            </PoseGroup>
-          </Container>
-        </React.Fragment>
+                onClick={() => children[i].props.onClick()}
+              >
+                <img
+                  src={children[i].props.imgSrc}
+                  style={{ height: size / 2, width: size / 2 }}
+                  alt={`icon-${i}`}
+                />
+              </Item>
+            ))}
+        </PoseGroup>
       )}
     </Floating>
   );
