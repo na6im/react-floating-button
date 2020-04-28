@@ -77,7 +77,7 @@ import forwardIcon from "./assets/FORWARD.svg";
 | top             | Specify if the button should be on the right if false the button will be at the left | boolean | `false`   |
 | size            | The size used for the buttons                                                        | number  | `60`      |
 | backgroundColor | The backgroundColor for the main button                                              | string  | `#8f1d30` |
-| color           | The color for the main button                                                        | string  | `#dbdbdb` |
+| color           | The color for the burger icon                                                        | string  | `#dbdbdb` |
 
 ### Item
 
