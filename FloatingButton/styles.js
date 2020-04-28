@@ -16,7 +16,6 @@ export const Floating = styled(
   })
 )`
   position: absolute;
-  top: ${(props) => (props.top ? "50" : "null")};
   display: flex;
   align-items: center;
   justify-content: center;

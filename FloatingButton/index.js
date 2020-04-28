@@ -84,26 +84,31 @@ function FloatingButton({
       ref={ref}
     >
       {number === 1 ? (
-        <Item
-          key={0}
-          i={getAngle(0).angle}
+        <Container
           size={size}
-          distance={getAngle(0).distance}
-          style={{
-            backgroundColor: children.props.backgroundColor,
-          }}
-          onClick={() => children.props.onClick()}
+          style={{ backgroundColor: `${backgroundColor || "none"}` }}
         >
-          <img
-            src={children.props.imgSrc}
+          <Item
+            key={0}
+            i={getAngle(0).angle}
+            size={size}
+            distance={getAngle(0).distance}
             style={{
-              height: size / 2,
-              width: size / 2,
-              fill: "white",
+              backgroundColor: children.props.backgroundColor,
             }}
-            alt={"icon"}
-          />
-        </Item>
+            onClick={() => children.props.onClick()}
+          >
+            <img
+              src={children.props.imgSrc}
+              style={{
+                height: size / 2,
+                width: size / 2,
+                fill: "white",
+              }}
+              alt={"icon"}
+            />
+          </Item>
+        </Container>
       ) : (
         <React.Fragment>
           <Container
@@ -122,28 +127,28 @@ function FloatingButton({
             ) : (
               <MenuToggle expanded={expanded} color={color} size={size} />
             )}
+            <PoseGroup>
+              {expanded &&
+                [...Array(number)].map((x, i) => (
+                  <Item
+                    key={i}
+                    i={getAngle(i).angle}
+                    size={size}
+                    distance={getAngle(i).distance}
+                    style={{
+                      backgroundColor: children[i].props.backgroundColor,
+                    }}
+                    onClick={() => children[i].props.onClick()}
+                  >
+                    <img
+                      src={children[i].props.imgSrc}
+                      style={{ height: size / 2, width: size / 2 }}
+                      alt={`icon-${i}`}
+                    />
+                  </Item>
+                ))}
+            </PoseGroup>
           </Container>
-          <PoseGroup>
-            {expanded &&
-              [...Array(number)].map((x, i) => (
-                <Item
-                  key={i}
-                  i={getAngle(i).angle}
-                  size={size}
-                  distance={getAngle(i).distance}
-                  style={{
-                    backgroundColor: children[i].props.backgroundColor,
-                  }}
-                  onClick={() => children[i].props.onClick()}
-                >
-                  <img
-                    src={children[i].props.imgSrc}
-                    style={{ height: size / 2, width: size / 2 }}
-                    alt={`icon-${i}`}
-                  />
-                </Item>
-              ))}
-          </PoseGroup>
         </React.Fragment>
       )}
     </Floating>
