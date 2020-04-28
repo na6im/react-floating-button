@@ -13,7 +13,7 @@ export const Floating = styled(
         props.number > 6 && (props.top ? props.distance : -props.distance),
     },
     closed: { x: 0, y: 0, rotate: 0 },
-  }),
+  })
 )`
   position: absolute;
   top: ${(props) => (props.top ? "50" : "null")};
@@ -34,7 +34,7 @@ export const Container = styled(
     init: { scale: 1 },
     hover: { scale: 1.2 },
     press: { scale: 0.8 },
-  }),
+  })
 )`
   height: ${(props) => props.size}px;
   width: ${(props) => props.size}px;
@@ -73,7 +73,7 @@ export const Item = styled(
         duration: 150,
       },
     },
-  }),
+  })
 )`
   position: absolute;
   height: ${(props) => props.size}px;

@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 const ToggleWrapper = styled.span`
   cursor: pointer;
   display: flex;
-  size: ${(props) => props.size / 2}px;
+  height: ${(props) => props.size / 2}px;
   position: relative;
   width: ${(props) => props.size / 2}px;
   flex-direction: column;
@@ -15,7 +15,7 @@ const ToggleWrapper = styled.span`
 `;
 
 const Line = styled.div`
-  size: ${(props) => props.size * 0.05}px;
+  height: ${(props) => props.size * 0.05}px;
   width: ${(props) => props.size * 0.5}px;
   border: white;
   border-radius: ${(props) => props.size * 0.05}px;

@@ -5,23 +5,23 @@ import PropTypes from "prop-types";
 const ToggleWrapper = styled.span`
   cursor: pointer;
   display: flex;
-  height: ${props => props.height / 2}px;
+  size: ${props => props.size / 2}px;
   position: relative;
-  width: ${props => props.height / 2}px;
+  width: ${props => props.size / 2}px;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 `;
 const Line = styled.div`
-  height: 4px;
-  width: ${props => props.height * 0.5}px;
+  size: ${props => props.size * 0.05}px;
+  width: ${props => props.size * 0.5}px;
   border: white;
-  border-radius: 3px;
+  border-radius: ${props => props.size * 0.05}px;
   background-color: ${props => props.color};
 `;
 const Line1 = posed(Line)({
   open: {
-    y: 10,
+    y: props => props.size / 6,
     rotate: 45
   },
   closed: {
@@ -35,13 +35,13 @@ const Line2 = posed(Line)({
     width: 0
   },
   closed: {
-    width: props => props.height * 0.6,
+    width: props => props.size * 0.5,
     rotate: 0
   }
 });
 const Line3 = posed(Line)({
   open: {
-    y: -10,
+    y: props => -props.size / 6,
     rotate: -45
   },
   closed: {
@@ -51,34 +51,34 @@ const Line3 = posed(Line)({
 });
 
 const MenuToggle = ({
-  height,
+  size,
   color
 }) => {
   const [open, setOpen] = useState(false);
   return /*#__PURE__*/React.createElement(ToggleWrapper, {
     onClick: () => setOpen(true),
-    height: height
+    size: size
   }, /*#__PURE__*/React.createElement(Line1, {
     pose: open ? "open" : "closed",
-    height: height,
+    size: size,
     color: color
   }), /*#__PURE__*/React.createElement(Line2, {
     pose: open ? "open" : "closed",
-    height: height,
+    size: size,
     color: color
   }), /*#__PURE__*/React.createElement(Line3, {
     pose: open ? "open" : "closed",
-    height: height,
+    size: size,
     color: color
   }));
 };
 
 MenuToggle.defaultProps = {
-  height: 60,
+  size: 60,
   color: "white"
 };
 MenuToggle.propTypes = {
-  height: PropTypes.number,
+  size: PropTypes.number,
   color: PropTypes.string
 };
 export default MenuToggle;

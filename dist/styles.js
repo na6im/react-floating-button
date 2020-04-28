@@ -43,9 +43,9 @@ export const Container = styled(posed.div({
     scale: 0.8
   }
 }))`
-  height: ${props => props.height}px;
-  width: ${props => props.height}px;
-  border-radius: 50px;
+  height: ${props => props.size}px;
+  width: ${props => props.size}px;
+  border-radius: ${props => props.size}px;
   background-color: #8f1d30;
   cursor: pointer;
   display: flex;
@@ -101,9 +101,9 @@ export const Item = styled(posed.div({
   }
 }))`
   position: absolute;
-  height: ${props => props.height}px;
-  width: ${props => props.height}px;
-  border-radius: 50px;
+  height: ${props => props.size}px;
+  width: ${props => props.size}px;
+  border-radius: ${props => props.size}px;
   background-color: #dbdbdb;
   cursor: pointer;
   display: flex;
