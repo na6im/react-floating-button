@@ -34,6 +34,7 @@ function FloatingButton({
   size,
   top,
   right,
+  icon,
   children,
 }) {
   const [expanded, setExpanded] = useState(false);
@@ -86,7 +87,18 @@ function FloatingButton({
         size={size}
         style={{ backgroundColor: `${backgroundColor || "none"}` }}
       >
-        <MenuToggle expanded={expanded} color={color} size={size} />
+        {icon ? (
+          <img
+            src={icon}
+            style={{
+              height: size / 2,
+              width: size / 2,
+            }}
+            alt={"icon"}
+          />
+        ) : (
+          <MenuToggle expanded={expanded} color={color} size={size} />
+        )}
       </Container>
       <PoseGroup>
         {number === 1 ? (

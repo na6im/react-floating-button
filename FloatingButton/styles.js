@@ -75,13 +75,15 @@ export const Item = styled(
     },
   })
 )`
+  white-space: nowrap;
   position: absolute;
   height: ${(props) => props.size}px;
-  width: ${(props) => props.size}px;
+  min-width: ${(props) => props.size}px;
   border-radius: ${(props) => props.size}px;
   background-color: #dbdbdb;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1em;
 `;
