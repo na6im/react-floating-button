@@ -19,7 +19,7 @@
 
 #### Demo
 
-Live demo: https://floating-button.namokrane.works/
+Live demo: https://react-floating-button.netlify.app/
 
 #### Screenshots
 
