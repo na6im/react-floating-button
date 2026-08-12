@@ -99,7 +99,3 @@ Contributing to the project is a piece of :cake:, read the [contributing guideli
 ## License
 
 The code is available under the [MIT](https://github.com/na6im/awsome-floating-button/blob/master/LICENSE) license.
-
-<p align="center">
- <b>WuuD® - in code we trust -
-</p>
